@@ -1,0 +1,94 @@
+/* General Navbar Styles */
+.navbar {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the navbar */
+}
+
+/* Brand Logo */
+.navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Navbar Links */
+.navbar-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+    .navbar-links li {
+        margin: 0 10px;
+    }
+
+    .navbar-links a {
+        color: #ddd;
+        text-decoration: none;
+        padding: 8px 12px;
+        font-size: 1rem;
+        transition: background 0.3s, color 0.3s;
+    }
+
+        .navbar-links a:hover {
+            background-color: #555; /* Darker on hover */
+            color: #fff;
+            border-radius: 4px;
+        }
+
+/* Authentication Buttons (Login/Register) */
+.navbar-auth .btn {
+    text-decoration: none;
+    padding: 8px 12px;
+    color: #fff;
+    border-radius: 4px;
+    transition: background 0.3s;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.login-btn {
+    background-color: #007bff;
+}
+
+.register-btn {
+    background-color: #28a745;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+        .navbar-links li {
+            margin: 5px 0;
+        }
+
+    .navbar-auth {
+        margin-top: 10px;
+    }
+}
