@@ -1,94 +1,134 @@
-/* General Navbar Styles */
-.navbar {
-    background-color: #333; /* Dark background color */
-    color: #fff; /* White text color */
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    font-family: Arial, sans-serif;
+/* Основен стил за страницата */
+body {
+    background-image: url('"C:\Users\НА012321\Desktop\F1 logo.png"'); /* Пътят до снимката */
+    background-size: cover; /* Прави така, че снимката да покрива целия екран */
+    background-position: center; /* Центрира изображението */
+    background-attachment: fixed; /* Фиксира фона при скрол */
+    background-repeat: no-repeat; /* Избягва повтаряне на изображението */
+    color: white; /* Задава бял цвят на текста, за да се вижда върху фона */
 }
 
-.navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Стилизация за контейнерите */
+.container {
     max-width: 1200px;
-    margin: 0 auto; /* Center the navbar */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Леко прозрачен фон */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Brand Logo */
-.navbar-brand {
-    color: #fff;
-    font-size: 1.5rem;
+/* Стилизация за заглавията */
+h1, h2, h3 {
+    color: red;
+    text-align: center;
     font-weight: bold;
-    text-decoration: none;
 }
 
-/* Navbar Links */
-.navbar-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+/* Стилизация за бутоните */
+button, .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-    .navbar-links li {
-        margin: 0 10px;
+    button:hover, .btn:hover {
+        background-color: red;
     }
 
-    .navbar-links a {
-        color: #ddd;
+    button:focus, .btn:focus {
+        outline: none;
+    }
+/* Навигационна лента */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+    .navbar a {
+        color: #ff0000; /* Червен цвят за текста на линковете */
         text-decoration: none;
-        padding: 8px 12px;
-        font-size: 1rem;
-        transition: background 0.3s, color 0.3s;
+        padding: 10px 15px;
+        font-weight: bold;
+        transition: color 0.3s ease; /* Плавен преход за цвета при задържане */
     }
 
-        .navbar-links a:hover {
-            background-color: #555; /* Darker on hover */
-            color: #fff;
+        .navbar a:hover {
+            color: #ffffff; /* Променя цвета на текста на бял при задържане */
+            background-color: #ff0000; /* Червен фон при задържане */
             border-radius: 4px;
         }
 
-/* Authentication Buttons (Login/Register) */
-.navbar-auth .btn {
-    text-decoration: none;
-    padding: 8px 12px;
-    color: #fff;
-    border-radius: 4px;
-    transition: background 0.3s;
-    font-size: 1rem;
-    margin-left: 10px;
+/* Стил за секциите с информация */
+.section {
+    padding: 30px;
+    margin: 20px 0;
+    background-color: red; /* Леко прозрачен фон */
+    border-radius: 8px;
 }
 
-.login-btn {
-    background-color: #007bff;
+/* Подобрен стил за таблици */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
 }
 
-.register-btn {
+    table th, table td {
+        padding: 12px 15px;
+        text-align: left;
+    }
+
+    table th {
+        background-color: #0056b3;
+        color: #ffffff;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    table tr:hover {
+        background-color: #ddd;
+    }
+
+/* Стил за формуляри */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input[type="submit"],
+form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
     background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    opacity: 0.8;
-}
-
-/* Responsive Design for Small Screens */
-@media (max-width: 768px) {
-    .navbar-container {
-        flex-direction: column;
-        align-items: flex-start;
+    form input[type="submit"]:hover,
+    form button:hover {
+        background-color: #218838;
     }
-
-    .navbar-links {
-        flex-direction: column;
-        width: 100%;
-    }
-
-        .navbar-links li {
-            margin: 5px 0;
-        }
-
-    .navbar-auth {
-        margin-top: 10px;
-    }
-}
