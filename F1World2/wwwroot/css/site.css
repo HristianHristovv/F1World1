@@ -1,6 +1,6 @@
 /* Основен стил за страницата */
 body {
-    background-image: url('"C:\Users\НА012321\Desktop\F1 logo.png"'); /* Пътят до снимката */
+    background-image: url('../images/background.png'); /* Пътят до снимката */
     background-size: cover; /* Прави така, че снимката да покрива целия екран */
     background-position: center; /* Центрира изображението */
     background-attachment: fixed; /* Фиксира фона при скрол */
